@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifacto | Playful Handmade Wonders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelLavender: '#E8E5F7',
+                        softMint: '#E2F5EE',
+                        vibrantCoral: '#FF6F61',
+                        sunnyYellow: '#FFD166',
+                        darkCharcoal: '#2B2D42'
+                    },
+                    fontFamily: {
+                        heading: ['Fredoka', 'sans-serif'],
+                        body: ['Quicksand', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Quicksand', sans-serif; }
+        h1, h2, h3 { font-family: 'Fredoka', sans-serif; }
+        /* Sticker-style effect */
+        .sticker-shadow {
+            filter: drop-shadow(4px 4px 0px #2B2D42);
+        }
+        /* Custom image zoom container */
+        .zoom-container img {
+            transition: transform 0.3s ease;
+        }
+        .zoom-container:hover img {
+            transform: scale(1.4);
+        }
+    </style>
+</head>
+<body class="bg-pastelLavender text-darkCharcoal antialiased min-h-screen">
+
+    <header class="bg-white border-b-4 border-darkCharcoal p-5 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold tracking-wider text-vibrantCoral transform -rotate-2 hover:rotate-0 transition duration-200">
+                ✨ Artifacto
+            </a>
+            <nav class="hidden md:flex space-x-6 font-bold text-lg">
+                <a href="#gallery" class="hover:text-vibrantCoral transition">The Gallery</a>
+                <a href="#maker" class="hover:text-vibrantCoral transition">Meet the Maker</a>
+                <a href="#custom" class="hover:text-vibrantCoral transition">Custom Requests</a>
+                <a href="#tracker" class="hover:text-vibrantCoral transition">Order Tracker</a>
+            </nav>
+            <button class="bg-sunnyYellow border-2 border-darkCharcoal text-darkCharcoal font-bold px-4 py-2 rounded-full hover:bg-vibrantCoral hover:text-white transition sticker-shadow">
+                Cart (0)
+            </button>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-10 space-y-20">
+
+        <section class="grid grid-md md:grid-cols-2 gap-10 items-center">
+            <div class="space-y-6 order-2 md:order-1 transform -rotate-1">
+                <span class="bg-sunnyYellow text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-darkCharcoal">100% Whimsical & Handmade</span>
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">Objects that bring <span class="text-vibrantCoral underline decoration-wavy">joy</span> to your space.</h1>
+                <p class="text-lg font-medium">We design quirky illustrations, colorful tufted rugs, and vibrant knitwear built to spice up everyday life.</p>
+                <a href="#gallery" class="inline-block bg-vibrantCoral text-white font-bold px-8 py-4 rounded-xl border-2 border-darkCharcoal text-xl tracking-wide hover:bg-sunnyYellow hover:text-darkCharcoal transition transform hover:-translate-y-1 sticker-shadow">
+                    Explore the Shop 🚀
+                </a>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <div class="bg-softMint border-4 border-darkCharcoal p-4 rounded-3xl transform rotate-3 sticker-shadow">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Colorful handmade craft studio" class="rounded-2xl border-2 border-darkCharcoal w-full h-80 object-cover">
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-sunnyYellow text-4xl p-3 rounded-full border-4 border-darkCharcoal animate-bounce">🧶</div>
+            </div>
+        </section>
+
+        <hr class="border-t-4 border-dashed border-darkCharcoal/30">
+
+        <section id="gallery" class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-4xl font-bold">The Craft Showcase</h2>
+                <p class="text-md">Hover over an item to view the crisp textures up close!</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white border-4 border-darkCharcoal rounded-2xl overflow-hidden flex flex-col hover:transform hover:scale-[1.02] transition duration-200">
+                    <div class="zoom-container overflow-hidden relative h-72 border-b-4 border-darkCharcoal cursor-zoom-in">
+                        <img src="https://images.unsplash.com/photo-1578301978693-85fa9c0320b9?auto=format&fit=crop&w=500&q=80" alt="Tufted rug closeup" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex-1 flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-softMint text-xs font-bold px-2 py-1 rounded border border-darkCharcoal">🌱 100% Organic Wool</span>
+                                <span class="bg-pastelLavender text-xs font-bold px-2 py-1 rounded border border-darkCharcoal">📍 Locally Sourced</span>
+                            </div>
+                            <h3 class="text-2xl font-bold">The Psychedelic Sunrise Rug</h3>
+                            <p class="text-sm text-gray-600 mt-1">Intricately tufted, ultra-soft accent rug that pops in any room style.</p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-bold text-vibrantCoral">$180.00</span>
+                            <button class="bg-sunnyYellow border-2 border-darkCharcoal px-4 py-2 rounded-lg font-bold hover:bg-vibrantCoral hover:text-white transition">Adopt This Craft</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border-4 border-darkCharcoal rounded-2xl overflow-hidden flex flex-col hover:transform hover:scale-[1.02] transition duration-200">
+                    <div class="zoom-container overflow-hidden relative h-72 border-b-4 border-darkCharcoal cursor-zoom-in">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=500&q=80" alt="Bright knitwear" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-5 flex-1 flex-col justify-between space-y-4">
+                        <div>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="bg-softMint text-xs font-bold px-2 py-1 rounded border border-darkCharcoal">🎨 Non-Toxic Dyes</span>
+                            </div>
+                            <h3 class="text-2xl font-bold">Checkerboard Chunky Beanie</h3>
+                            <p class="text-sm text-gray-600 mt-1">Thick knit styling to keep your head cozy and ridiculously stylish.</p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <span class="text-2xl font-bold text-vibrantCoral">$45.00</span>
+                            <button class="bg-sunnyYellow border-2 border-darkCharcoal px-4 py-2 rounded-lg font-bold hover:bg-vibrantCoral hover:text-white transition">Adopt This Craft</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="maker" class="bg-softMint border-4 border-darkCharcoal rounded-3xl p-8 md:p-12 grid md:grid-cols-3 gap-8 items-center transform rotate-1">
+            <div class="md:col-span-1 text-center">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="The Artisan Art" class="w-40 h-40 rounded-full mx-auto border-4 border-darkCharcoal object-cover shadow-md">
+                <h3 class="text-2xl font-bold mt-4">Meet Clara Finch</h3>
+                <p class="text-vibrantCoral font-bold">Master Tufter & Dreamer</p>
+            </div>
+            <div class="md:col-span-2 space-y-4">
+                <h4 class="text-3xl font-bold">"Every stitch contains a piece of my daydream."</h4>
+                <p class="text-md leading-relaxed">Welcome to Artifacto! I spin, dye, and assemble everything right out of my sun-lit studio in Portland. I believe that your home decor shouldn't be boring or cookie-cutter. By working with local wool farms and eco-friendly dyes, I ensure each piece respects the planet while infusing your living quarters with maximalist energy.</p>
+                <div class="pt-2">
+                    <span class="inline-block bg-white text-xs font-bold px-3 py-1.5 rounded-full border-2 border-darkCharcoal mr-2">📺 Studio Vlog Ep.12</span>
+                    <span class="inline-block bg-white text-xs font-bold px-3 py-1.5 rounded-full border-2 border-darkCharcoal">📸 @ArtifactoStudio</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="custom" class="bg-white border-4 border-darkCharcoal rounded-3xl p-8 max-w-2xl mx-auto shadow-xl">
+            <div class="text-center mb-6">
+                <h2 class="text-3xl font-bold">✨ Commission a Custom Piece</h2>
+                <p class="text-sm text-gray-600 mt-1">Want custom dimensions, colors, or initials? Let's collaborate!</p>
+            </div>
+
+            <form id="customForm" class="space-y-4">
+                <div>
+                    <label class="block font-bold mb-1">Your Name</label>
+                    <input type="text" name="name" required class="w-full border-2 border-darkCharcoal p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-vibrantCoral">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Your Email</label>
+                    <input type="email" name="email" required class="w-full border-2 border-darkCharcoal p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-vibrantCoral">
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Type of Craft</label>
+                    <select name="craftType" class="w-full border-2 border-darkCharcoal p-3 rounded-xl bg-white font-bold">
+                        <option>Tufted Accent Rug</option>
+                        <option>Knit Apparel</option>
+                        <option>Whimsical Illustration</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block font-bold mb-1">Personalization Details</label>
+                    <textarea name="details" rows="4" required placeholder="Describe your dream colors, patterns, and sizing specifications..." class="w-full border-2 border-darkCharcoal p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-vibrantCoral"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-vibrantCoral text-white font-bold py-3 rounded-xl border-2 border-darkCharcoal text-lg hover:bg-sunnyYellow hover:text-darkCharcoal transition sticker-shadow">
+                    Send Proposal to Maker 💌
+                </button>
+            </form>
+            <div id="formResponse" class="hidden mt-4 p-4 text-center font-bold rounded-xl border-2 border-darkCharcoal"></div>
+        </section>
+
+        <section id="tracker" class="space-y-6 max-w-4xl mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold">Track Active Custom Commissions</h2>
+                <p class="text-sm text-gray-600">See your creations come alive in real-time</p>
+            </div>
+
+            <div class="bg-sunnyYellow border-4 border-darkCharcoal rounded-2xl p-6 shadow-md">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="font-bold">Order #ART-9921 (Custom Rug)</span>
+                    <span class="bg-white px-3 py-1 rounded-full text-xs font-bold border border-darkCharcoal text-vibrantCoral">Estimated Delivery: June 15</span>
+                </div>
+                
+                <div class="grid grid-cols-4 text-center relative pt-4">
+                    <div class="absolute top-7 left-0 right-0 h-1 bg-darkCharcoal/30 z-0 mx-10"></div>
+                    
+                    <div class="z-10 flex flex-col items-center">
+                        <div class="w-8 h-8 rounded-full bg-vibrantCoral border-2 border-darkCharcoal flex items-center justify-center text-white text-xs font-bold">✓</div>
+                        <p class="text-xs font-bold mt-2">Order Received</p>
+                    </div>
+                    <div class="z-10 flex flex-col items-center">
+                        <div class="w-8 h-8 rounded-full bg-vibrantCoral border-2 border-darkCharcoal flex items-center justify-center text-white text-xs font-bold">✓</div>
+                        <p class="text-xs font-bold mt-2">Being Crafted</p>
+                    </div>
+                    <div class="z-10 flex flex-col items-center">
+                        <div class="w-8 h-8 rounded-full bg-white border-2 border-darkCharcoal flex items-center justify-center text-darkCharcoal text-xs font-bold animate-pulse">🎨</div>
+                        <p class="text-xs font-bold mt-2 text-vibrantCoral">Quality Check</p>
+                    </div>
+                    <div class="z-10 flex flex-col items-center opacity-40">
+                        <div class="w-8 h-8 rounded-full bg-white border-2 border-darkCharcoal flex items-center justify-center text-darkCharcoal text-xs font-bold">📦</div>
+                        <p class="text-xs font-bold mt-2">Shipped</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-darkCharcoal text-white text-center py-8 mt-20 border-t-4 border-black">
+        <p class="font-bold text-lg">© 2026 Artifacto Studio. Crafted with love, color, and pixels.</p>
+    </footer>
+
+    
